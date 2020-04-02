@@ -11,11 +11,11 @@ export class UI{
 }
 
 export class Data{
-    resultados(info){
+    resultados(name){
         const article = document.getElementById('article');
         const element = document.createElement('div');
         element.classList.add('showRes');
-        element.innerHTML = `<h3>"${info}"</h3>`;
+        element.innerHTML = `<h3>"${name}"</h3>`;
         element.innerHTML += `<p>Esto es una prueba</p>`;
         element.innerHTML += `<p>Esto sigue siendo una prueba</p>`;
         article.appendChild(element);
