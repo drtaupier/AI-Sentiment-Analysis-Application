@@ -1,0 +1,143 @@
+$header-bg: #594185;
+$footer-bg: #594185;
+$button-bg: #594185;
+$font-claro: #f3f3f3;
+$font-white: #fff;
+$website-bg: #f8f8f8;
+$bg-white: #fff;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background: $website-bg;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    min-width: 370px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header header header header"
+    "section section section section"
+    "footer footer footer footer";
+}
+
+header{
+    height: 10vh;
+    width: 100vw;
+    grid-area: header;
+    background: $header-bg;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header h1{
+    color: $font-claro;
+    margin-left: 80px;
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+section{
+    height: 80vh;
+    width: 100vw;
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section article{
+    width: 50%;
+    height: 100%;
+}
+
+section article form{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+section article form input[type='text']{
+    width: 80%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+
+section article form input[type='submit']{
+    border: 1px solid $button-bg;
+    background: $button-bg;
+    color: $font-white;
+    width: 100px;
+    height: 45px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+footer{
+    height: 10vh;
+    width: 100vw;
+    background: $footer-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerInfo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerInfo h4{
+    color: $font-white;
+    font-weight: normal;
+}
+
+.showRes{
+    width: 90%;
+    padding: 18px;
+    height: 180px;
+    border: 1px solid #d1c6c6;
+    border-radius: 5px;
+    background: $bg-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: -180px;
+    left: 0;
+}
+
+.showRes h3{
+    font-size: 0.9em;
+    margin-top: -35px;
+    line-height: 2em;
+    margin-bottom: 15px;
+}
+
+.showRes p{
+    font-size: 0.8em;
+}
