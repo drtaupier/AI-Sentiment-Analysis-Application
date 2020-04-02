@@ -1,3 +1,4 @@
 require('./style/style.scss')
 require('./js/app')
-require('./js/display')
+import { checkForName } from './js/nameChecker'
+import { handleSubmit } from './js/formHandler'
