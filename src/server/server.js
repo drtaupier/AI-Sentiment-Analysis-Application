@@ -41,7 +41,6 @@ app.post('/getSentiment', (req,res)=>{
         if (error === null) {
           console.log('response: ', response);
         }
-        console.log('Solicitud: ',solicitud);
         res.send(response)
       });
 })
