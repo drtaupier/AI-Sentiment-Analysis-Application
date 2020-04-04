@@ -1,5 +1,10 @@
 require('dotenv').config();
-console.log(`Your API key is ${process.env.API_KEY}`);
+var AYLIENTextAPI = require('aylien_textapi');
+var textapi = new AYLIENTextAPI({
+  application_id: `${process.env.API_ID}`,
+  application_key: `${process.env.API_KEY}`
+});
+
 var path = require('path')
 //Express to run server and routes
 const express = require('express');
@@ -26,6 +31,20 @@ app.use((req, res, next) => {
 app.get('/', (req,res) => {
     res.sendFile(path.resolve('./dist/index.html'));
 });
+
+//POST Route
+app.post('/getSentiment', (req,res)=>{
+    var solicitud = req.body.text;
+    textapi.sentiment(
+        solicitud
+      , function(error, response) {
+        if (error === null) {
+          console.log('response: ', response);
+        }
+        console.log('Solicitud: ',solicitud);
+        res.send(response)
+      });
+})
 
 //Initializing the main project folder
 app.use(express.static('dist'));
