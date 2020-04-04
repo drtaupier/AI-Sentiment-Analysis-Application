@@ -20,7 +20,6 @@ const postData = async(url='', data={})=>{
    });
    try{
        const newData = await response.json();
-       console.log(newData);
        const imprimir = new Data();
        imprimir.resultados(newData);
        return newData;

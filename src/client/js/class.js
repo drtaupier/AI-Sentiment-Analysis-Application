@@ -16,9 +16,11 @@ export class Data{
         const article = document.getElementById('article');
         const element = document.createElement('div');
         element.classList.add('showRes');
-        element.innerHTML = `<h3>"${newData.polarity}"</h3>`;
-        element.innerHTML += `<p>Esto es una prueba</p>`;
-        element.innerHTML += `<p>Esto sigue siendo una prueba</p>`;
+        element.innerHTML = `<p><b>Polarity:</b> ${newData.polarity}</p>`;
+        element.innerHTML += `<p><b>Subjetivity:</b> ${newData.subjectivity}</p>`;
+        element.innerHTML += `<p><b>Text:</b> ${newData.text}</p>`;
+        element.innerHTML += `<p><b>Polarity confidence:</b> ${newData.polarity_confidence}</p>`;
+        element.innerHTML += `<p><b>Subjectivity confidence:</b> ${newData.subjectivity_confidence}</p>`;
         article.appendChild(element);
     }
     delete(){
