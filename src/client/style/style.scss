@@ -72,7 +72,7 @@ section article form{
     left: 0;
 }
 
-section article form input[type='text']{
+section article form input:nth-child(1){
     width: 80%;
     padding: 15px;
     border: none;
@@ -118,7 +118,8 @@ footer{
 .showRes{
     width: 90%;
     padding: 18px;
-    height: 180px;
+    min-height: 180px;
+    height: auto;
     border: 1px solid #d1c6c6;
     border-radius: 5px;
     background: $bg-white;
@@ -150,6 +151,11 @@ footer{
     section article{
         width: 100%;
     }
+
+    form{
+        width: 100%;
+        margin: 0 auto;
+    }
     
     .showRes{
         width: 100%;
@@ -178,7 +184,7 @@ footer{
         margin: 0 auto;
     }
 
-    section article form input[type='text']{
+    section article form input:nth-child(1){
         width: 100%;
     }
 
