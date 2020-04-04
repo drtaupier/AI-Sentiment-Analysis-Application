@@ -1,7 +1,9 @@
 import{ Data } from './class'
+const imprimir = new Data();
 const form = document.getElementById('form');
 
 export function handleSubmit(e){
+  imprimir.delete();
   e.preventDefault();
   const formText = document.getElementById('name').value
   postData('/getSentiment', {"text": formText});
@@ -20,7 +22,6 @@ const postData = async(url='', data={})=>{
    });
    try{
        const newData = await response.json();
-       const imprimir = new Data();
        imprimir.resultados(newData);
        return newData;
   }catch(error){
