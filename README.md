@@ -1,0 +1,1 @@
+This is a Client/Service Application that receives users sentiments and evaluates.
