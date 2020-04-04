@@ -11,14 +11,20 @@
         <header id="header">
             <h1>Aylien API</h1>
         </header>
-        <section id="section">
-            <article id='article'>
-                <form id='form' onsubmit="return handleSubmit(event)">
-                    <input type="text" name="name" id="name" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" id='send' value="Send" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            </article>
-        </section>
+        <main>
+            <section id="section">
+                <article id='article'>
+                    <form id='form'>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <input type="submit" id='send' value="Send">
+                    </form>
+                </article>
+            </section>
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results"></div>
+            </section>
+        </main>
         <footer id="footer"></footer>
     </div>
 </body>

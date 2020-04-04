@@ -7,6 +7,7 @@ export class UI{
         element.classList.add('footerInfo');
         element.innerHTML = `<h4>Copyright &copy; ${year}</h4>`;
         footer.appendChild(element);
+
     }
 }
 
@@ -20,7 +21,6 @@ export class Data{
         element.innerHTML += `<p>Esto sigue siendo una prueba</p>`;
         article.appendChild(element);
     }
-    
     delete(){
         const form = document.getElementById('form');
         const resultados = form.nextElementSibling;
@@ -28,5 +28,4 @@ export class Data{
             resultados.remove();
         }
     }
-
 }
