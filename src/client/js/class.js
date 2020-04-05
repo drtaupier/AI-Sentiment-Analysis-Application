@@ -13,7 +13,7 @@ export class UI{
 
 export class Data{
     resultados(newData){
-        const article = document.getElementById('article');
+        const respuesta = document.getElementById('respuesta');
         const element = document.createElement('div');
         element.classList.add('showRes');
         element.innerHTML = `<p><b>Polarity:</b> ${newData.polarity}</p>`;
@@ -21,11 +21,11 @@ export class Data{
         element.innerHTML += `<p><b>Text:</b> ${newData.text}</p>`;
         element.innerHTML += `<p><b>Polarity confidence:</b> ${newData.polarity_confidence}</p>`;
         element.innerHTML += `<p><b>Subjectivity confidence:</b> ${newData.subjectivity_confidence}</p>`;
-        article.appendChild(element);
+        respuesta.appendChild(element);
     }
     delete(){
-        const form = document.getElementById('form');
-        const resultados = form.nextElementSibling;
+        const respuesta = document.getElementById('respuesta');
+        const resultados = respuesta.firstElementChild;
         if(resultados){
             resultados.remove();
         }

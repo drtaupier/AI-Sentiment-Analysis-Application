@@ -47,28 +47,33 @@ header h1{
 }
 
 section{
-    height: 80vh;
+    min-height: 80vh;
+    height: auto;
     width: 100vw;
     grid-area: section;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-section article{
-    width: 50%;
-    height: 100%;
+#article{
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section article form{
-    width: 90%;
+    width: 50%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 0;
+    top: 120px;
     left: 0;
 }
 
@@ -90,7 +95,7 @@ section article form input[type='submit']{
     border-radius: 5px;
     outline: none;
     cursor: pointer;
-
+    margin-bottom: 20px;
 }
 
 footer{
@@ -115,8 +120,17 @@ footer{
     font-weight: normal;
 }
 
+#respuesta{
+    width: 100%;
+    min-height: 40vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 .showRes{
-    width: 90%;
+    width: 50%;
     padding: 18px;
     min-height: 180px;
     height: auto;
@@ -127,9 +141,6 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
-    top: -180px;
-    left: 0;
 }
 
 .showRes p{
@@ -141,6 +152,13 @@ footer{
     section article{
         width: 80%;
     }
+
+    section article form input:nth-child(1){
+        width: 90%;
+    }
+    section article form{
+        width: 80%;
+    }
 }
 
 @media only screen and (min-width:500px) and (max-width:749px){
@@ -148,8 +166,8 @@ footer{
         margin-left: 60px;
     }
 
-    section article{
-        width: 100%;
+    section article form{
+        width: 95%;
     }
 
     form{
@@ -171,6 +189,10 @@ footer{
         "footer";
     }
 
+    section article form{
+        width: 90%;
+    }
+
     header h1{
         margin-left: 20px;
     }
@@ -189,6 +211,7 @@ footer{
     }
 
     .showRes{
+        left: 0;
         width: 100%;
     }
 
