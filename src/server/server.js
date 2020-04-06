@@ -48,7 +48,7 @@ app.post('/getSentiment', (req,res)=>{
 //Initializing the main project folder
 app.use(express.static('dist'));
 
-const port = 3000;
+const port = 4000;
 
 //TODO-spin up the server
 const server = app.listen(port,()=>{
