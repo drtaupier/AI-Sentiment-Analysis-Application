@@ -3,14 +3,19 @@ const imprimir = new Data();
 const form = document.getElementById('form');
 
 export function handleSubmit(e){
-  imprimir.delete();
-  e.preventDefault();
-  const formText = document.getElementById('name').value
-  postData('/getSentiment', {"text": formText});
+    e.preventDefault();
+    imprimir.delete();
+    const formText = document.getElementById('name').value;
+    if(formText === ""){
+        imprimir.information('Please, complete the form');
+        return false;
+    }else{
+        postData('/getSentiment', {"text": formText});
+    }
 }
 form.addEventListener('submit', handleSubmit, false);
 
-const postData = async(url='', data={})=>{
+export const postData = async(url='', data={})=>{
    const response = await fetch(url,{
        method:'POST', //*GET, POST, PUT, DELETE, etc.
        credentials:'same-origin',

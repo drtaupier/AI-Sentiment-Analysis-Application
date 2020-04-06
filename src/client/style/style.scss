@@ -51,8 +51,6 @@ section{
     width: 100vw;
     grid-area: section;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -64,19 +62,17 @@ section{
     align-items: center;
 }
 
-section article form{
+#form{
     width: 50%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
-    top: 120px;
-    left: 0;
+    margin-top: 200px;
 }
 
-section article form input:nth-child(1){
+#form input:nth-child(1){
     width: 80%;
     padding: 15px;
     border: none;
@@ -85,7 +81,7 @@ section article form input:nth-child(1){
     margin-bottom: 8px;
 }
 
-section article form input[type='submit']{
+#form input[type='submit']{
     border: 1px solid $button-bg;
     background: $button-bg;
     color: $font-white;
@@ -95,6 +91,43 @@ section article form input[type='submit']{
     outline: none;
     cursor: pointer;
     margin-bottom: 20px;
+}
+
+#respuesta{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.showRes{
+    width: 50%;
+    padding: 20px;
+    min-height: 180px;
+    height: 75%;
+    border: 1px solid #d1c6c6;
+    border-radius: 5px;
+    background: $bg-white;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.showAlert{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}
+
+.showRes p{
+    font-size: 0.9em;
+    line-height: 2.2em;
+    text-align: justify;
 }
 
 footer{
@@ -117,35 +150,6 @@ footer{
 .footerInfo h4{
     color: $font-white;
     font-weight: normal;
-}
-
-#respuesta{
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.showRes{
-    width: 50%;
-    padding: 20px;
-    min-height: 180px;
-    height: 75%;
-    border: 1px solid #d1c6c6;
-    border-radius: 5px;
-    background: $bg-white;
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    flex-direction: column;
-    overflow: auto;
-}
-
-.showRes p{
-    font-size: 0.9em;
-    line-height: 2.2em;
-    text-align: justify;
 }
 
 @media only screen and (min-width:750px) and (max-width:1100px){
@@ -184,7 +188,7 @@ footer{
     }
 }
 
-@media only screen and (min-width:370px) and (max-width:499px){
+@media only screen and (min-width:340px) and (max-width:499px){
     .container{
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -216,7 +220,7 @@ footer{
 
     .showRes{
         left: 0;
-        width: 100%;
+        width: 100vw;
     }
 
 }

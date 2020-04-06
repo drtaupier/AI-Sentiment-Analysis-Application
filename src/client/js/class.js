@@ -23,11 +23,22 @@ export class Data{
         element.innerHTML += `<p><b>Subjectivity confidence:</b> ${newData.subjectivity_confidence}</p>`;
         respuesta.appendChild(element);
     }
+    
     delete(){
+        const send = document.getElementById('send');
+        send.addEventListener('click', ()=>{
+            const resultados = send.parentElement.parentElement.nextElementSibling.firstChild;
+            if(resultados){
+                resultados.remove();
+            }
+        })
+    }
+
+    information(message){
         const respuesta = document.getElementById('respuesta');
-        const resultados = respuesta.firstElementChild;
-        if(resultados){
-            resultados.remove();
-        }
+        const element = document.createElement('div');
+        element.classList.add('showAlert');
+        element.innerHTML = `${message}`;
+        respuesta.appendChild(element);
     }
 }
