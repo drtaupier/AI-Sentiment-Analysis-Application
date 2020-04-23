@@ -1,13 +1,20 @@
 This is a Client/Service Application that receives users sentiments and evaluates.
 
-# Aylien SDK
+# AI-Sentiment-Analysis-Application
 
 This is a natural language processing which allows us to obtain information about an article, or a text, to determine if the text is positive, negative or neutral. 
 
 ## My Project
 
-The main page is made in HTML, SASS code which was converted to CSS using WebPack and JavaScript code.
+This project was made using:
 
-Tests were performed using Jest.
+* HTML
+* SASS
+* JavaScript
+* Node.js
+* Express
+* Webpack
+
+For the tests I used Jest.
 
 I have my code to development and production.
